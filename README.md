@@ -16,6 +16,9 @@ This aligns with [WCAG 2.2 accessibility guidance](https://www.w3.org/WAI/WCAG22
 npm install --save @lowlydba/canvas-confetti-a11y
 ```
 
+To review exactly what differs from upstream, see:
+`https://github.com/catdad/canvas-confetti/compare/master...lowlydba:canvas-confetti-a11y:master`
+
 The remaining README is unmodified:
 
 ---
