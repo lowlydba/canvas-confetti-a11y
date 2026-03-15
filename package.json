@@ -1,7 +1,7 @@
 {
-  "name": "canvas-confetti",
+  "name": "@lowlydba/canvas-confetti-a11y",
   "version": "1.9.4",
-  "description": "performant confetti animation in the browser",
+  "description": "performant confetti animation in the browser + disableForReducedMotion default",
   "main": "src/confetti.js",
   "module": "dist/confetti.module.mjs",
   "jsdelivr": "dist/confetti.browser.js",
@@ -9,6 +9,7 @@
     "build": "node build/build.js",
     "browserify": "browserify --entry src/confetti.js --outfile temp/confetti.bundle.js --standalone confetti",
     "minify": "terser --compress --mangle -o temp/confetti.min.js -- dist/confetti.browser.js",
+    "prepack": "npm run build -s",
     "pretest": "npm run build -s && npm run browserify -s && npm run -s minify",
     "test": "cd test && ava --verbose --serial",
     "lint": "eslint src/**/*.js test/**/*.js build/**/*.js",
@@ -18,14 +19,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/catdad/canvas-confetti.git"
+    "url": "git+https://github.com/lowlydba/canvas-confetti-a11y.git"
   },
-  "author": "Kiril Vatev <vatev.1@gmail.com>",
+  "author": "John McCall <john@lowlydba.com>",
+  "contributors": [
+    "Kiril Vatev <vatev.1@gmail.com>",
+    "John McCall <john@lowlydba.com>"
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/catdad/canvas-confetti/issues"
+    "url": "https://github.com/lowlydba/canvas-confetti-a11y/issues"
   },
-  "homepage": "https://github.com/catdad/canvas-confetti#readme",
+  "homepage": "https://github.com/lowlydba/canvas-confetti-a11y#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "ava": "2.4.0",
     "babel-eslint": "^8.2.1",
@@ -46,10 +54,17 @@
     "burst",
     "fireworks",
     "snow",
-    "particles"
+    "particles",
+    "a11y"
   ],
-  "funding": {
-    "type": "donate",
-    "url": "https://www.paypal.me/kirilvatev"
-  }
+  "funding": [
+    {
+      "type": "donate",
+      "url": "https://www.paypal.me/kirilvatev"
+    },
+    {
+      "type": "other",
+      "url": "https://buymeacoffee.com/johnmcc"
+    }
+  ]
 }

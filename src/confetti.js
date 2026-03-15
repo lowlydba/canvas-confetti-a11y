@@ -243,8 +243,8 @@
       '#ffa62d',
       '#ff36ff'
     ],
-    // probably should be true, but back-compat
-    disableForReducedMotion: false,
+    // true by default to respect user preferences for reduced motion
+    disableForReducedMotion: true,
     scalar: 1
   };
 

@@ -1,3 +1,25 @@
+# Canvas Confetti A11y
+
+This is the unofficial accessibility (a11y) fork of Canvas Confetti. The *only* modification is to the `defaults` var:
+
+```diff
+- disableForReducedMotion: false,
++ disableForReducedMotion: true,
+```
+
+Defaulting `disableForReducedMotion` to true is an important change: it listens to users' system-level motion preferences and helps protect people who can be harmed by intense animation.
+
+This aligns with [WCAG 2.2 accessibility guidance](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions), and reflects a simple truth: accessibility helps all of us by making the web safer, more inclusive, and more humane.
+
+
+```bash
+npm install --save @lowlydba/canvas-confetti-a11y
+```
+
+The remaining README is unmodified:
+
+---
+
 # [![Canvas Confetti](https://cdn.jsdelivr.net/gh/catdad-experiments/catdad-experiments-org@5ed78b/canvas-confetti/logo.jpg)](https://github.com/catdad/canvas-confetti/)
 
 [![github actions ci][ci.svg]][ci.link]
